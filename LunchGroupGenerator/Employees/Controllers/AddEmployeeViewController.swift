@@ -74,7 +74,42 @@ extension AddEmployeeViewController
     // Saves the employee info to Core Data
     fileprivate func saveEmployee()
     {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        { return }
         
+        // get the managed context
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // entity description
+        guard let entity = NSEntityDescription.entity(forEntityName: EmployeeManagedObjectKey.employeeEntity, in: managedContext) else
+        { return }
+        
+        // insert into context
+        let employee = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        if let firstName = self.firstNameTextField?.text
+        { employee.setValue(firstName, forKey: EmployeeManagedObjectKey.firstName) }
+        
+        if let lastName = self.lastNameTextField?.text
+        { employee.setValue(lastName, forKey: EmployeeManagedObjectKey.lastName) }
+        
+        if let jobTitle = self.jobTitleTextField?.text
+        { employee.setValue(jobTitle, forKey: EmployeeManagedObjectKey.jobTitle) }
+        
+        if let department = self.departmentTextField?.text
+        { employee.setValue(department, forKey: EmployeeManagedObjectKey.department) }
+        
+        if let email = self.emailTextField?.text
+        { employee.setValue(email, forKey: EmployeeManagedObjectKey.email) }
+        
+        // save context
+        do
+        {
+            try managedContext.save()
+            self.delegate?.addEmployeeViewController(controller: self, didAddEmployee: employee)
+        }
+        catch let error as NSError
+        { NSLog(error.localizedDescription) }
     }
 }
 
@@ -84,6 +119,9 @@ extension AddEmployeeViewController
 {
     fileprivate func localizeStrings()
     {
+        // nav item
+        self.navigationItem.title = NSLocalizedString("Employee", comment: "Employee")
+        
         // localize labels
         self.firstNameLabel?.text = NSLocalizedString("First Name", comment: "First Name")
         self.lastNameLabel?.text = NSLocalizedString("Last Name", comment: "Last Name")

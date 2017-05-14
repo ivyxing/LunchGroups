@@ -46,6 +46,7 @@ class EmployeesViewController: UIViewController
     {
         super.viewDidLoad()
         
+        self.setupTableView()
         self.registerCells()
         self.fetchEmployeeList()
     }
@@ -66,7 +67,23 @@ extension EmployeesViewController
     // fetchs a list of employees from Core Data
     func fetchEmployeeList()
     {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        { return }
         
+        // get the managed context
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // initialize fetch request
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: EmployeeManagedObjectKey.employeeEntity)
+        
+        // execute the request
+        do
+        {
+            self.employees = try managedContext.fetch(fetchRequest)
+            self.tableView?.reloadData()
+        }
+        catch let error as NSError
+        { NSLog(error.localizedDescription) }
     }
 }
 
@@ -90,6 +107,7 @@ extension EmployeesViewController: UITableViewDataSource
         // get employee and setup cell
         let employee = self.employees[indexPath.row]
         employeeCell.tableView(tableView: tableView, setupCellWithAny: employee, indexPath: indexPath)
+        employeeCell.selectionStyle = .none
         
         return employeeCell
     }
@@ -98,6 +116,12 @@ extension EmployeesViewController: UITableViewDataSource
 //MARK: - Helper Functions: Initialization -
 extension EmployeesViewController
 {
+    fileprivate func setupTableView()
+    {
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
+        self.tableView?.estimatedRowHeight = 100
+    }
+    
     fileprivate func registerCells()
     {
         guard let tableView = self.tableView else
