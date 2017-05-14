@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		5AD5A1AB1EC7E37000CC8248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1AA1EC7E37000CC8248 /* AppDelegate.swift */; };
-		5AD5A1AD1EC7E37000CC8248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1AC1EC7E37000CC8248 /* ViewController.swift */; };
 		5AD5A1B01EC7E37000CC8248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1AE1EC7E37000CC8248 /* Main.storyboard */; };
 		5AD5A1B31EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1B11EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld */; };
 		5AD5A1B51EC7E37000CC8248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1B41EC7E37000CC8248 /* Assets.xcassets */; };
 		5AD5A1B81EC7E37000CC8248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1B61EC7E37000CC8248 /* LaunchScreen.storyboard */; };
 		5AD5A1C31EC7E37000CC8248 /* LunchGroupGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1C21EC7E37000CC8248 /* LunchGroupGeneratorTests.swift */; };
+		5AD5A1D11EC7E56F00CC8248 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1D01EC7E56F00CC8248 /* MasterViewController.swift */; };
+		5AD5A1D21EC7E56F00CC8248 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1D01EC7E56F00CC8248 /* MasterViewController.swift */; };
+		5AD5A1F81EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */; };
+		5AD5A1F91EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */; };
+		5AD5A1FB1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */; };
+		5AD5A1FC1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */; };
+		5AD5A2071EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */; };
+		5AD5A2081EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */; };
+		5AD5A2091EC8186300CC8248 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */; };
+		5AD5A20A1EC8186300CC8248 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */; };
+		5AD5A20B1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */; };
+		5AD5A20C1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */; };
+		5AD5A20D1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */; };
+		5AD5A20E1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */; };
+		5AD5A20F1EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */; };
+		5AD5A2101EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */; };
+		5AD5A2111EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */; };
+		5AD5A2121EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +46,6 @@
 /* Begin PBXFileReference section */
 		5AD5A1A71EC7E37000CC8248 /* LunchGroupGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchGroupGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD5A1AA1EC7E37000CC8248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AD5A1AC1EC7E37000CC8248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5AD5A1AF1EC7E37000CC8248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AD5A1B21EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LunchGroupGenerator.xcdatamodel; sourceTree = "<group>"; };
 		5AD5A1B41EC7E37000CC8248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +54,15 @@
 		5AD5A1BE1EC7E37000CC8248 /* LunchGroupGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchGroupGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD5A1C21EC7E37000CC8248 /* LunchGroupGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchGroupGeneratorTests.swift; sourceTree = "<group>"; };
 		5AD5A1C41EC7E37000CC8248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD5A1D01EC7E56F00CC8248 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchGroupsViewController.swift; sourceTree = "<group>"; };
+		5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LunchGroupsStoryboard.storyboard; sourceTree = "<group>"; };
+		5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmployeesStoryboard.storyboard; sourceTree = "<group>"; };
+		5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				5AD5A1AA1EC7E37000CC8248 /* AppDelegate.swift */,
-				5AD5A1AC1EC7E37000CC8248 /* ViewController.swift */,
+				5AD5A1D01EC7E56F00CC8248 /* MasterViewController.swift */,
 				5AD5A1AE1EC7E37000CC8248 /* Main.storyboard */,
 				5AD5A1B41EC7E37000CC8248 /* Assets.xcassets */,
 				5AD5A1B61EC7E37000CC8248 /* LaunchScreen.storyboard */,
 				5AD5A1B91EC7E37000CC8248 /* Info.plist */,
 				5AD5A1B11EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld */,
+				5AD5A1FD1EC8186300CC8248 /* Employees */,
+				5AD5A1F31EC8168A00CC8248 /* Lunch Groups */,
 			);
 			path = LunchGroupGenerator;
 			sourceTree = "<group>";
@@ -97,6 +124,76 @@
 				5AD5A1C41EC7E37000CC8248 /* Info.plist */,
 			);
 			path = LunchGroupGeneratorTests;
+			sourceTree = "<group>";
+		};
+		5AD5A1F31EC8168A00CC8248 /* Lunch Groups */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */,
+				5AD5A1F41EC8168A00CC8248 /* Controllers */,
+				5AD5A1F61EC8168A00CC8248 /* Protocols */,
+				5AD5A1F71EC8168A00CC8248 /* Views */,
+			);
+			path = "Lunch Groups";
+			sourceTree = "<group>";
+		};
+		5AD5A1F41EC8168A00CC8248 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AD5A1F61EC8168A00CC8248 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5AD5A1F71EC8168A00CC8248 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AD5A1FD1EC8186300CC8248 /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */,
+				5AD5A1FE1EC8186300CC8248 /* Controllers */,
+				5AD5A2021EC8186300CC8248 /* Protocols */,
+				5AD5A2041EC8186300CC8248 /* Views */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		5AD5A1FE1EC8186300CC8248 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */,
+				5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AD5A2021EC8186300CC8248 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5AD5A2041EC8186300CC8248 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */,
+				5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +246,7 @@
 				TargetAttributes = {
 					5AD5A1A61EC7E37000CC8248 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TB9WEC63DM;
+						DevelopmentTeam = KFWMW5427E;
 						ProvisioningStyle = Automatic;
 					};
 					5AD5A1BD1EC7E37000CC8248 = {
@@ -184,9 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD5A1FB1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */,
 				5AD5A1B81EC7E37000CC8248 /* LaunchScreen.storyboard in Resources */,
 				5AD5A1B51EC7E37000CC8248 /* Assets.xcassets in Resources */,
+				5AD5A2111EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */,
 				5AD5A1B01EC7E37000CC8248 /* Main.storyboard in Resources */,
+				5AD5A20B1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD5A2121EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */,
+				5AD5A1FC1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */,
+				5AD5A20C1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD5A1AD1EC7E37000CC8248 /* ViewController.swift in Sources */,
+				5AD5A1F81EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */,
+				5AD5A20F1EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */,
 				5AD5A1B31EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld in Sources */,
+				5AD5A2091EC8186300CC8248 /* EmployeesViewController.swift in Sources */,
+				5AD5A20D1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */,
 				5AD5A1AB1EC7E37000CC8248 /* AppDelegate.swift in Sources */,
+				5AD5A1D11EC7E56F00CC8248 /* MasterViewController.swift in Sources */,
+				5AD5A2071EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD5A20A1EC8186300CC8248 /* EmployeesViewController.swift in Sources */,
+				5AD5A2101EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */,
+				5AD5A1F91EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */,
+				5AD5A1D21EC7E56F00CC8248 /* MasterViewController.swift in Sources */,
+				5AD5A20E1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */,
+				5AD5A2081EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */,
 				5AD5A1C31EC7E37000CC8248 /* LunchGroupGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TB9WEC63DM;
+				DEVELOPMENT_TEAM = KFWMW5427E;
 				INFOPLIST_FILE = LunchGroupGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivyxing.LunchGroupGenerator;
@@ -358,7 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TB9WEC63DM;
+				DEVELOPMENT_TEAM = KFWMW5427E;
 				INFOPLIST_FILE = LunchGroupGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivyxing.LunchGroupGenerator;
