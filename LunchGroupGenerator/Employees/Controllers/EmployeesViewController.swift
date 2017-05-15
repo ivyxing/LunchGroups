@@ -50,7 +50,15 @@ class EmployeesViewController: UIViewController
         self.registerCells()
         
         if self.employees.count == 0
-        { self.fetchEmployeeList() }
+        {
+            // fetch new list
+            self.fetchEmployeeList()
+        }
+        else
+        {
+            // existing list - view only
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
