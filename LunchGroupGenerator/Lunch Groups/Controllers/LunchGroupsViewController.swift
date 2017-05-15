@@ -250,7 +250,7 @@ extension LunchGroupsViewController
 //MARK: - Helper Functions: Group Generation -
 extension LunchGroupsViewController
 {
-    fileprivate func generateNewLunchGroups()
+    func generateNewLunchGroups()
     {
         // clear old data
         self.clearData()

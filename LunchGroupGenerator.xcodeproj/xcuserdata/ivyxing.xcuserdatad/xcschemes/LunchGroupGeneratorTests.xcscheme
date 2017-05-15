@@ -9,23 +9,9 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5AD5A1A61EC7E37000CC8248"
-               BuildableName = "LunchGroupGenerator.app"
-               BlueprintName = "LunchGroupGenerator"
-               ReferencedContainer = "container:LunchGroupGenerator.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5AD5A1BD1EC7E37000CC8248"
@@ -53,15 +39,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5AD5A1A61EC7E37000CC8248"
-            BuildableName = "LunchGroupGenerator.app"
-            BlueprintName = "LunchGroupGenerator"
-            ReferencedContainer = "container:LunchGroupGenerator.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -75,16 +52,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5AD5A1A61EC7E37000CC8248"
-            BuildableName = "LunchGroupGenerator.app"
-            BlueprintName = "LunchGroupGenerator"
+            BlueprintIdentifier = "5AD5A1BD1EC7E37000CC8248"
+            BuildableName = "LunchGroupGeneratorTests.xctest"
+            BlueprintName = "LunchGroupGeneratorTests"
             ReferencedContainer = "container:LunchGroupGenerator.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +70,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5AD5A1A61EC7E37000CC8248"
-            BuildableName = "LunchGroupGenerator.app"
-            BlueprintName = "LunchGroupGenerator"
+            BlueprintIdentifier = "5AD5A1BD1EC7E37000CC8248"
+            BuildableName = "LunchGroupGeneratorTests.xctest"
+            BlueprintName = "LunchGroupGeneratorTests"
             ReferencedContainer = "container:LunchGroupGenerator.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
