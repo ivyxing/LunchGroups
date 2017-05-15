@@ -204,6 +204,29 @@ extension LunchGroupsViewController: UITableViewDataSource
     }
 }
 
+//MARK: - UITableViewDelegate -
+extension LunchGroupsViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        guard indexPath.row < self.lunchGroups.count else
+        { return }
+        
+        // detail list controller
+        let employeesViewController = EmployeesViewController.loadFromNib()
+        
+        // get lunch group and employees set
+        let lunchGroup = self.lunchGroups[indexPath.row]
+        let employeesSet = lunchGroup.mutableSetValue(forKey: LunchGroupManagedObjectKey.employees)
+        
+        // pass employees
+        if let employeesArray = employeesSet.allObjects as? Array<NSManagedObject>
+        { employeesViewController.employees = employeesArray }
+        
+        self.navigationController?.pushViewController(employeesViewController, animated: true)
+    }
+}
+
 //MARK: - Helper Functions: Initialization -
 extension LunchGroupsViewController
 {

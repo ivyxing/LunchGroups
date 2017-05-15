@@ -48,7 +48,9 @@ class EmployeesViewController: UIViewController
         
         self.setupTableView()
         self.registerCells()
-        self.fetchEmployeeList()
+        
+        if self.employees.count == 0
+        { self.fetchEmployeeList() }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
