@@ -35,6 +35,7 @@ class LunchGroupsViewControllerTests: XCTestCase
         guard lunchGroupsVC.employees.count >= lunchGroupsVC.numOfEmployeesPerGroupMin else
         { return }
         
+        var totalEmployees = 0
         
         // make sure every lunch group has a valid number of employees
         for lunchGroup in lunchGroupsVC.lunchGroups
@@ -43,10 +44,14 @@ class LunchGroupsViewControllerTests: XCTestCase
             {
                 XCTAssertLessThanOrEqual(employees.count, lunchGroupsVC.numOfEmployeesPerGroupMax)
                 XCTAssertGreaterThanOrEqual(employees.count, lunchGroupsVC.numOfEmployeesPerGroupMin)
+                totalEmployees += employees.count
             }
             else
             { XCTFail("No employees in this group") }
         }
+        
+        // make sure everyone is included
+        XCTAssertEqual(lunchGroupsVC.employees.count, totalEmployees, "The employees in each group should add up to the total employees")
     }
 }
 
