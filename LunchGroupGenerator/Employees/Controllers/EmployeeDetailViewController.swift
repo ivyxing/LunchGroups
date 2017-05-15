@@ -158,9 +158,9 @@ extension EmployeeDetailViewController
         // localize textfield placeholder strings
         self.firstNameTextField?.placeholder = NSLocalizedString("Jane", comment: "Jane")
         self.lastNameTextField?.placeholder = NSLocalizedString("Doe", comment: "Doe")
-        self.jobTitleTextField?.placeholder = NSLocalizedString("iOS Engineer", comment: "iOS Engineer")
-        self.departmentTextField?.placeholder = NSLocalizedString("Engineering - Mobile", comment: "Engineering - Mobile")
-        self.emailTextField?.placeholder = NSLocalizedString("jdoe@apartmentlist.com", comment: "jdoe@apartmentlist.com")
+        self.jobTitleTextField?.placeholder = NSLocalizedString("e.g.: iOS Engineer", comment: "iOS Engineer")
+        self.departmentTextField?.placeholder = NSLocalizedString("e.g.: Mobile", comment: "Engineering - Mobile")
+        self.emailTextField?.placeholder = NSLocalizedString("e.g.: jdoe@apartmentlist.com", comment: "jdoe@apartmentlist.com")
     }
     
     fileprivate func setupEmployee(employee: NSManagedObject)
