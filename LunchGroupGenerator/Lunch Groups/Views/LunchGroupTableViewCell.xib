@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="6Qk-Qc-BMx" customClass="LunchGroupTableViewCell" customModule="LunchGroupGenerator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Qk-Qc-BMx" id="Pb2-DU-e9Q">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrq-PH-u2w">
+                        <rect key="frame" x="23" y="13" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-w1-pi4">
+                        <rect key="frame" x="23" y="44" width="310" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.1529411765" green="0.41960784309999999" blue="0.69019607839999997" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJF-QW-DtN">
+                        <rect key="frame" x="288.5" y="13" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-1d-I8Y">
+                        <rect key="frame" x="0.0" y="82.5" width="356" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8hf-pB-B78"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="mJF-QW-DtN" secondAttribute="trailing" constant="15" id="7s0-03-AgB"/>
+                    <constraint firstItem="jfs-w1-pi4" firstAttribute="top" secondItem="Vrq-PH-u2w" secondAttribute="bottom" constant="10" id="DDm-u3-eKs"/>
+                    <constraint firstItem="Vrq-PH-u2w" firstAttribute="leading" secondItem="Pb2-DU-e9Q" secondAttribute="leadingMargin" constant="15" id="I6i-hx-7KV"/>
+                    <constraint firstItem="6zE-1d-I8Y" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jfs-w1-pi4" secondAttribute="bottom" constant="10" id="Js3-vd-teZ"/>
+                    <constraint firstItem="Vrq-PH-u2w" firstAttribute="top" secondItem="Pb2-DU-e9Q" secondAttribute="topMargin" constant="5" id="MJD-U3-51u"/>
+                    <constraint firstItem="jfs-w1-pi4" firstAttribute="leading" secondItem="Vrq-PH-u2w" secondAttribute="leading" id="MRN-uu-GKW"/>
+                    <constraint firstItem="mJF-QW-DtN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vrq-PH-u2w" secondAttribute="trailing" constant="5" id="QfG-zi-J2k"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jfs-w1-pi4" secondAttribute="trailing" constant="15" id="Qlm-fI-GuN"/>
+                    <constraint firstAttribute="bottom" secondItem="6zE-1d-I8Y" secondAttribute="bottom" id="bK5-bz-fPA"/>
+                    <constraint firstItem="mJF-QW-DtN" firstAttribute="top" secondItem="Vrq-PH-u2w" secondAttribute="top" id="oFi-Dx-FdN"/>
+                    <constraint firstItem="6zE-1d-I8Y" firstAttribute="leading" secondItem="Pb2-DU-e9Q" secondAttribute="leading" id="wff-bt-eMa"/>
+                    <constraint firstAttribute="trailing" secondItem="6zE-1d-I8Y" secondAttribute="trailing" id="zLL-z2-GXZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="employeeListLabel" destination="jfs-w1-pi4" id="fRy-j6-tT1"/>
+                <outlet property="numOfEmployeesLabel" destination="mJF-QW-DtN" id="q0u-mR-fTR"/>
+                <outlet property="titleLabel" destination="Vrq-PH-u2w" id="JO4-sb-OsH"/>
+                <outletCollection property="infoLabelsCollection" destination="jfs-w1-pi4" collectionClass="NSMutableArray" id="sbP-eT-beE"/>
+                <outletCollection property="infoLabelsCollection" destination="Vrq-PH-u2w" collectionClass="NSMutableArray" id="PS9-XT-8n6"/>
+                <outletCollection property="infoLabelsCollection" destination="mJF-QW-DtN" collectionClass="NSMutableArray" id="dNR-69-ADA"/>
+            </connections>
+            <point key="canvasLocation" x="-1" y="6"/>
+        </tableViewCell>
+    </objects>
+</document>

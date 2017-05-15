@@ -23,7 +23,7 @@ class EmployeesViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView?
     // constants
-    let addEmployeeSegue = "AddEmployeeViewControllerSegue"
+    let employeeDetailSegue = "EmployeeDetailViewControllerSegue"
     // data properties
     var employees = Array<NSManagedObject>() // array of employees
     
@@ -53,10 +53,10 @@ class EmployeesViewController: UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == self.addEmployeeSegue,
-            let addEmployeeController = segue.destination as? AddEmployeeViewController
+        if segue.identifier == self.employeeDetailSegue,
+            let detailController = segue.destination as? EmployeeDetailViewController
         {
-            addEmployeeController.delegate = self
+            detailController.delegate = self
         }
     }
 }
@@ -113,6 +113,24 @@ extension EmployeesViewController: UITableViewDataSource
     }
 }
 
+//MARK: - UITableViewDelegate -
+extension EmployeesViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {   
+        guard indexPath.row < self.employees.count else
+        { return }
+        
+        // get the employee and pass to detail controller
+        let employee = self.employees[indexPath.row]
+        let detailController = EmployeeDetailViewController.loadFromNib()
+        detailController.employee = employee
+        detailController.delegate = self
+       
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
+}
+
 //MARK: - Helper Functions: Initialization -
 extension EmployeesViewController
 {
@@ -120,6 +138,8 @@ extension EmployeesViewController
     {
         self.tableView?.rowHeight = UITableViewAutomaticDimension
         self.tableView?.estimatedRowHeight = 100
+        
+        self.navigationItem.title = NSLocalizedString("Employee List", comment: "Employee List")
     }
     
     fileprivate func registerCells()
@@ -131,20 +151,29 @@ extension EmployeesViewController
     }
 }
 
-//MARK: - AddEmployeeViewControllerDelegate -
-extension EmployeesViewController: AddEmployeeViewControllerDelegate
+//MARK: - EmployeeDetailViewControllerDelegate -
+extension EmployeesViewController: EmployeeDetailViewControllerDelegate
 {
-    func addEmployeeViewControllerDidCancel(controller: AddEmployeeViewController)
+    func employeeDetailViewController(controller: EmployeeDetailViewController, didSaveEmployeeInfo employee: NSManagedObject)
     {
+        if let index = self.employees.index(of: employee)
+        {
+            // modified existing, update
+            self.employees[index] = employee
+        }
+        else
+        {
+            // new employee! add to list and refresh
+            self.employees.append(employee)
+        }
+        
+        self.tableView?.reloadData()
+        
         _ = self.navigationController?.popToViewController(self, animated: true)
     }
     
-    func addEmployeeViewController(controller: AddEmployeeViewController, didAddEmployee employee: NSManagedObject)
+    func employeeDetailViewControllerDidCancel(controller: EmployeeDetailViewController)
     {
-        // add to list and refresh
-        self.employees.append(employee)
-        self.tableView?.reloadData()
-        
         _ = self.navigationController?.popToViewController(self, animated: true)
     }
 }

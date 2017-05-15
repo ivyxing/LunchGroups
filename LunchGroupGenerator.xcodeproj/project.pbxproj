@@ -19,18 +19,23 @@
 		5AD5A1F91EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */; };
 		5AD5A1FB1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */; };
 		5AD5A1FC1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */; };
-		5AD5A2071EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */; };
-		5AD5A2081EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */; };
+		5AD5A2071EC8186300CC8248 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* EmployeeDetailViewController.swift */; };
+		5AD5A2081EC8186300CC8248 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1FF1EC8186300CC8248 /* EmployeeDetailViewController.swift */; };
 		5AD5A2091EC8186300CC8248 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */; };
 		5AD5A20A1EC8186300CC8248 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */; };
 		5AD5A20B1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */; };
 		5AD5A20C1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */; };
-		5AD5A20D1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */; };
-		5AD5A20E1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */; };
+		5AD5A20D1EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift */; };
+		5AD5A20E1EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2031EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift */; };
 		5AD5A20F1EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */; };
 		5AD5A2101EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */; };
 		5AD5A2111EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */; };
 		5AD5A2121EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */; };
+		5AD5A2171EC8324B00CC8248 /* LunchGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2161EC8324B00CC8248 /* LunchGroupTableViewCell.swift */; };
+		5AD5A2181EC8324B00CC8248 /* LunchGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A2161EC8324B00CC8248 /* LunchGroupTableViewCell.swift */; };
+		5AD5A21A1EC8325400CC8248 /* LunchGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2191EC8325400CC8248 /* LunchGroupTableViewCell.xib */; };
+		5AD5A21B1EC8325400CC8248 /* LunchGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD5A2191EC8325400CC8248 /* LunchGroupTableViewCell.xib */; };
+		5AD5A21F1ECA2FDD00CC8248 /* LunchGroupGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD5A1B11EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +62,14 @@
 		5AD5A1D01EC7E56F00CC8248 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		5AD5A1F51EC8168A00CC8248 /* LunchGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchGroupsViewController.swift; sourceTree = "<group>"; };
 		5AD5A1FA1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LunchGroupsStoryboard.storyboard; sourceTree = "<group>"; };
-		5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		5AD5A1FF1EC8186300CC8248 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		5AD5A2011EC8186300CC8248 /* EmployeesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmployeesStoryboard.storyboard; sourceTree = "<group>"; };
-		5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		5AD5A2031EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5AD5A2051EC8186300CC8248 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		5AD5A2061EC8186300CC8248 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
+		5AD5A2161EC8324B00CC8248 /* LunchGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchGroupTableViewCell.swift; sourceTree = "<group>"; };
+		5AD5A2191EC8325400CC8248 /* LunchGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LunchGroupTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +162,8 @@
 		5AD5A1F71EC8168A00CC8248 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AD5A2161EC8324B00CC8248 /* LunchGroupTableViewCell.swift */,
+				5AD5A2191EC8325400CC8248 /* LunchGroupTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,7 +182,7 @@
 		5AD5A1FE1EC8186300CC8248 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AD5A1FF1EC8186300CC8248 /* AddEmployeeViewController.swift */,
+				5AD5A1FF1EC8186300CC8248 /* EmployeeDetailViewController.swift */,
 				5AD5A2001EC8186300CC8248 /* EmployeesViewController.swift */,
 			);
 			path = Controllers;
@@ -182,7 +191,7 @@
 		5AD5A2021EC8186300CC8248 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5AD5A2031EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift */,
+				5AD5A2031EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 				5AD5A1FB1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */,
 				5AD5A1B81EC7E37000CC8248 /* LaunchScreen.storyboard in Resources */,
 				5AD5A1B51EC7E37000CC8248 /* Assets.xcassets in Resources */,
+				5AD5A21A1EC8325400CC8248 /* LunchGroupTableViewCell.xib in Resources */,
 				5AD5A2111EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */,
 				5AD5A1B01EC7E37000CC8248 /* Main.storyboard in Resources */,
 				5AD5A20B1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */,
@@ -296,6 +306,7 @@
 			files = (
 				5AD5A2121EC8186300CC8248 /* EmployeeTableViewCell.xib in Resources */,
 				5AD5A1FC1EC816A900CC8248 /* LunchGroupsStoryboard.storyboard in Resources */,
+				5AD5A21B1EC8325400CC8248 /* LunchGroupTableViewCell.xib in Resources */,
 				5AD5A20C1EC8186300CC8248 /* EmployeesStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,10 +322,11 @@
 				5AD5A20F1EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */,
 				5AD5A1B31EC7E37000CC8248 /* LunchGroupGenerator.xcdatamodeld in Sources */,
 				5AD5A2091EC8186300CC8248 /* EmployeesViewController.swift in Sources */,
-				5AD5A20D1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */,
+				5AD5A2171EC8324B00CC8248 /* LunchGroupTableViewCell.swift in Sources */,
+				5AD5A20D1EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift in Sources */,
 				5AD5A1AB1EC7E37000CC8248 /* AppDelegate.swift in Sources */,
 				5AD5A1D11EC7E56F00CC8248 /* MasterViewController.swift in Sources */,
-				5AD5A2071EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */,
+				5AD5A2071EC8186300CC8248 /* EmployeeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +336,12 @@
 			files = (
 				5AD5A20A1EC8186300CC8248 /* EmployeesViewController.swift in Sources */,
 				5AD5A2101EC8186300CC8248 /* EmployeeTableViewCell.swift in Sources */,
+				5AD5A2181EC8324B00CC8248 /* LunchGroupTableViewCell.swift in Sources */,
 				5AD5A1F91EC8168A00CC8248 /* LunchGroupsViewController.swift in Sources */,
 				5AD5A1D21EC7E56F00CC8248 /* MasterViewController.swift in Sources */,
-				5AD5A20E1EC8186300CC8248 /* AddEmployeeViewControllerDelegate.swift in Sources */,
-				5AD5A2081EC8186300CC8248 /* AddEmployeeViewController.swift in Sources */,
+				5AD5A20E1EC8186300CC8248 /* EmployeeDetailViewControllerDelegate.swift in Sources */,
+				5AD5A2081EC8186300CC8248 /* EmployeeDetailViewController.swift in Sources */,
+				5AD5A21F1ECA2FDD00CC8248 /* LunchGroupGenerator.xcdatamodeld in Sources */,
 				5AD5A1C31EC7E37000CC8248 /* LunchGroupGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +544,7 @@
 				5AD5A1C91EC7E37000CC8248 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AD5A1CA1EC7E37000CC8248 /* Build configuration list for PBXNativeTarget "LunchGroupGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +553,7 @@
 				5AD5A1CC1EC7E37000CC8248 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

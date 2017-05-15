@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" id="aD2-Er-4YL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qCA-gk-bYF">
                             <connections>
-                                <segue destination="m7s-NO-Bhg" kind="show" identifier="AddEmployeeViewControllerSegue" id="5U6-rX-PG3"/>
+                                <segue destination="m7s-NO-Bhg" kind="show" identifier="EmployeeDetailViewControllerSegue" id="5U6-rX-PG3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="674" y="399"/>
         </scene>
-        <!--Add Employee View Controller-->
+        <!--Employee Detail View Controller-->
         <scene sceneID="2ZN-Zo-TPI">
             <objects>
-                <tableViewController storyboardIdentifier="AddEmployeeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m7s-NO-Bhg" customClass="AddEmployeeViewController" customModule="LunchGroupGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EmployeeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m7s-NO-Bhg" customClass="EmployeeDetailViewController" customModule="LunchGroupGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="6gf-H3-hfR">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,9 +21,9 @@ class EmployeeTableViewCell: UITableViewCell
     {
         super.awakeFromNib()
         
+        // initialize labels
         if let collection = self.infoLabelsCollection
         {
-            // initialize labels
             for label in collection
             { label.text = "" }
         }
@@ -70,10 +70,12 @@ extension EmployeeTableViewCell
         var firstName = ""
         var lastName = ""
         
-        if let firstNameValue = employee.value(forKey: EmployeeManagedObjectKey.firstName) as? String
+        if let firstNameValue = employee.value(forKey: EmployeeManagedObjectKey.firstName) as? String,
+            firstNameValue.characters.count > 0
         { firstName = firstNameValue }
         
-        if let lastNameValue = employee.value(forKey: EmployeeManagedObjectKey.lastName) as? String
+        if let lastNameValue = employee.value(forKey: EmployeeManagedObjectKey.lastName) as? String,
+            lastNameValue.characters.count > 0
         { lastName = lastNameValue }
         
         self.nameLabel?.text = "\(firstName) \(lastName)"
@@ -82,21 +84,24 @@ extension EmployeeTableViewCell
     // sets up employee job title
     fileprivate func setupJobTitle(employee: NSManagedObject)
     {
-        if let jobTitleValue = employee.value(forKey: EmployeeManagedObjectKey.jobTitle) as? String
+        if let jobTitleValue = employee.value(forKey: EmployeeManagedObjectKey.jobTitle) as? String,
+            jobTitleValue.characters.count > 0
         { self.jobTitleLabel?.text = jobTitleValue }
     }
     
     // sets up employee department
     fileprivate func setupDepartment(employee: NSManagedObject)
     {
-        if let departmentValue = employee.value(forKey: EmployeeManagedObjectKey.department) as? String
+        if let departmentValue = employee.value(forKey: EmployeeManagedObjectKey.department) as? String,
+            departmentValue.characters.count > 0
         { self.departmentLabel?.text = "@ \(departmentValue)" }
     }
     
     // sets up employee contact email
     fileprivate func setupEmail(employee: NSManagedObject)
     {
-        if let emailValue = employee.value(forKey: EmployeeManagedObjectKey.email) as? String
+        if let emailValue = employee.value(forKey: EmployeeManagedObjectKey.email) as? String,
+            emailValue.characters.count > 0
         { self.emailLabel?.text = emailValue }
     }
 }
