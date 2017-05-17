@@ -13,6 +13,8 @@ protocol EmployeeDetailViewControllerDelegate: class
 {
     // created new employee
     func employeeDetailViewController(controller: EmployeeDetailViewController, didSaveEmployeeInfo employee: NSManagedObject)
+    // removed current employee
+    func employeeDetailViewController(controller: EmployeeDetailViewController, didRemoveEmployee employee: NSManagedObject)
     // cancelled creation
     func employeeDetailViewControllerDidCancel(controller: EmployeeDetailViewController)
 }

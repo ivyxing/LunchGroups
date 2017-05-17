@@ -74,7 +74,7 @@ class EmployeesViewController: UIViewController
 //MARK: - Core Data -
 extension EmployeesViewController
 {
-    // fetchs a list of employees from Core Data
+    // Fetchs a list of employees from Core Data
     func fetchEmployeeList()
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
@@ -89,8 +89,30 @@ extension EmployeesViewController
         // execute the request
         do
         {
-            self.employees = try managedContext.fetch(fetchRequest)
+            self.employees = try managedContext.fetch(fetchRequest) // fetch list
+            self.sortEmployees()                                   // sort list
             self.tableView?.reloadData()
+        }
+        catch let error as NSError
+        { NSLog(error.localizedDescription) }
+    }
+    
+    // Removes a employee from core data
+    func removeEmployeeData(employee: NSManagedObject)
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        { return }
+        
+        // get the managed context
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // delete employee
+        managedContext.delete(employee)
+        
+        // save context
+        do
+        {
+            try managedContext.save()
         }
         catch let error as NSError
         { NSLog(error.localizedDescription) }
@@ -120,6 +142,12 @@ extension EmployeesViewController: UITableViewDataSource
         employeeCell.selectionStyle = .none
         
         return employeeCell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        { self.removeEmployee(index: indexPath.row) }
     }
 }
 
@@ -161,6 +189,45 @@ extension EmployeesViewController
     }
 }
 
+//MARK: - Helper Functions: Utilities -
+extension EmployeesViewController
+{
+    // Sorts current list of employees alphabetically by first name
+    fileprivate func sortEmployees()
+    {
+        self.employees.sort
+            { (employee1, employee2) -> Bool in
+                // default fist names
+                var firstName1 = ""
+                var firstName2 = ""
+                
+                // check if first name value returned
+                if let employee1FirstName = employee1.value(forKey: EmployeeManagedObjectKey.firstName) as? String
+                { firstName1 = employee1FirstName }
+                if let employee2FirstName = employee2.value(forKey: EmployeeManagedObjectKey.firstName) as? String
+                { firstName2 = employee2FirstName }
+                
+                return firstName1 < firstName2
+            }
+    }
+    
+    // Removes an employee from both core data and local array
+    fileprivate func removeEmployee(index: Int)
+    {
+        // check index within bounds
+        guard index < self.employees.count else
+        { return }
+        
+        // remove from core data
+        let employee = self.employees[index]
+        self.removeEmployeeData(employee: employee)
+        
+        // remove from local array
+        self.employees.remove(at: index)
+        self.tableView?.reloadData()
+    }
+}
+
 //MARK: - EmployeeDetailViewControllerDelegate -
 extension EmployeesViewController: EmployeeDetailViewControllerDelegate
 {
@@ -178,6 +245,18 @@ extension EmployeesViewController: EmployeeDetailViewControllerDelegate
         }
         
         self.tableView?.reloadData()
+        
+        _ = self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+    func employeeDetailViewController(controller: EmployeeDetailViewController, didRemoveEmployee employee: NSManagedObject)
+    {
+        // check index
+        guard let index = self.employees.index(of: employee) else
+        { return }
+        
+        // remove employee
+        self.removeEmployee(index: index)
         
         _ = self.navigationController?.popToViewController(self, animated: true)
     }

@@ -26,6 +26,7 @@ class EmployeeDetailViewController: UITableViewController
     @IBOutlet weak var jobTitleTextField: UITextField?
     @IBOutlet weak var departmentTextField: UITextField?
     @IBOutlet weak var emailTextField: UITextField?
+    @IBOutlet weak var removeButton: UIButton?
     
     // data properties
     var employee: NSManagedObject?
@@ -83,6 +84,15 @@ extension EmployeeDetailViewController
         
         // save to core data
         self.saveEmployee()
+    }
+    
+    // user pressed remove employee
+    @IBAction func didPressRemoveEmployee(_ sender: Any)
+    {
+        guard let employee = self.employee else
+        { return }
+        
+        self.delegate?.employeeDetailViewController(controller: self, didRemoveEmployee: employee)
     }
 }
 
@@ -161,6 +171,10 @@ extension EmployeeDetailViewController
         self.jobTitleTextField?.placeholder = NSLocalizedString("e.g.: iOS Engineer", comment: "iOS Engineer")
         self.departmentTextField?.placeholder = NSLocalizedString("e.g.: Mobile", comment: "Engineering - Mobile")
         self.emailTextField?.placeholder = NSLocalizedString("e.g.: jdoe@apartmentlist.com", comment: "jdoe@apartmentlist.com")
+        
+        // localize button
+        let removeTitle = NSLocalizedString("Remove Employee", comment: "Remove Employee")
+        self.removeButton?.setTitle(removeTitle, for: .normal)
     }
     
     fileprivate func setupEmployee(employee: NSManagedObject)
